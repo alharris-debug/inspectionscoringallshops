@@ -9,52 +9,43 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); min-height: 100vh; }
     
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
     
-    /* Header */
     .header { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #4f46e5 100%); color: white; }
     .header-content { padding: 32px 0; }
     .header h1 { font-size: 28px; font-weight: 700; }
     .header p { color: #c7d2fe; font-size: 16px; margin-top: 8px; }
     
-    /* Tabs */
     .tabs { display: flex; gap: 4px; border-bottom: 1px solid rgba(99, 102, 241, 0.3); overflow-x: auto; }
     .tab { padding: 12px 20px; font-size: 14px; font-weight: 500; border: none; background: transparent; color: #c7d2fe; cursor: pointer; border-radius: 8px 8px 0 0; white-space: nowrap; transition: all 0.2s; }
     .tab:hover { background: rgba(99, 102, 241, 0.3); color: white; }
     .tab.active { background: white; color: #4f46e5; }
     
-    /* Content */
     .content { padding: 32px 0; }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
     
-    /* Grid */
     .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 24px; }
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
     @media (max-width: 1024px) { .grid-5, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .grid-5, .grid-2, .grid-4, .grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .grid-5, .grid-2, .grid-4 { grid-template-columns: 1fr; } }
     
-    /* Cards */
     .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; margin-bottom: 24px; }
     .card h3 { font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 16px; }
     .card h4 { font-size: 15px; font-weight: 600; color: #334155; margin-bottom: 12px; }
     
-    /* Stat Cards */
     .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; border-left: 4px solid #6366f1; }
     .stat-card .label { font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
     .stat-card .value { font-size: 28px; font-weight: 700; margin-top: 4px; color: #6366f1; }
     .stat-card .subtitle { font-size: 12px; color: #94a3b8; margin-top: 4px; }
     
-    /* Segment Cards */
     .segment-card { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; text-align: center; }
     .segment-card .segment-label { font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px; }
     .segment-card .segment-value { font-size: 32px; font-weight: 800; }
     .segment-card .segment-metric { font-size: 11px; color: #94a3b8; margin-top: 4px; }
     .segment-card .segment-count { font-size: 11px; color: #94a3b8; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e2e8f0; }
     
-    /* Alerts */
     .alert { padding: 16px 20px; border-radius: 12px; margin-bottom: 24px; }
     .alert-indigo { background: #eef2ff; border: 1px solid #c7d2fe; color: #3730a3; }
     .alert-green { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
@@ -63,7 +54,6 @@
     .alert-rose { background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239; }
     .alert strong { font-weight: 600; }
     
-    /* Summary Box */
     .summary-box { background: linear-gradient(135deg, #eef2ff 0%, #faf5ff 100%); border-radius: 16px; padding: 24px; border: 1px solid #c7d2fe; margin-bottom: 24px; }
     .summary-box h3 { font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 16px; }
     .summary-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -75,7 +65,6 @@
     .warn { color: #f59e0b; }
     .arrow { color: #6366f1; }
     
-    /* Tables */
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
     th { text-align: left; padding: 12px 16px; font-weight: 600; color: #475569; background: #f8fafc; border-bottom: 2px solid #e2e8f0; }
     td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; }
@@ -87,10 +76,24 @@
     .text-blue { color: #3b82f6; }
     .text-green { color: #10b981; }
     .text-indigo { color: #6366f1; }
+    .text-slate { color: #64748b; }
     .font-bold { font-weight: 700; }
     .font-mono { font-family: ui-monospace, monospace; }
     
-    /* Heat Map Matrix */
+    /* Threshold tables */
+    .threshold-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .threshold-table th { padding: 10px 12px; background: #f1f5f9; font-weight: 600; color: #475569; text-align: center; border: 1px solid #e2e8f0; }
+    .threshold-table td { padding: 10px 12px; text-align: center; border: 1px solid #e2e8f0; }
+    .threshold-table .row-header { background: #f8fafc; font-weight: 600; text-align: left; color: #334155; }
+    .threshold-table .observed { background: #f0fdf4; color: #166534; font-weight: 600; }
+    .threshold-table .minimum { background: #fef3c7; color: #92400e; }
+    .threshold-table .target { background: #dbeafe; color: #1e40af; font-weight: 700; }
+    .threshold-table .excellent { background: #dcfce7; color: #166534; font-weight: 700; }
+    
+    .metric-header { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 12px 16px; border-radius: 8px 8px 0 0; margin-bottom: 0; font-size: 16px; font-weight: 700; }
+    .metric-table-wrap { border: 2px solid #6366f1; border-radius: 0 0 8px 8px; overflow: hidden; margin-bottom: 24px; }
+    .metric-table-wrap table { margin-bottom: 0; }
+    
     .matrix-table { width: 100%; border-collapse: collapse; }
     .matrix-table th, .matrix-table td { padding: 12px; text-align: center; font-size: 13px; }
     .matrix-table th { background: #f1f5f9; font-weight: 600; color: #475569; }
@@ -102,7 +105,6 @@
     .heat-med-high { background: #fecaca; color: #991b1b; }
     .heat-high { background: #fca5a5; color: #7f1d1d; }
     
-    /* Threshold Cards */
     .threshold-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
     .threshold-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
     .threshold-header h4 { margin: 0 0 4px 0; }
@@ -110,11 +112,9 @@
     .badge { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; background: #eef2ff; color: #4f46e5; }
     .threshold-bar { height: 32px; background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #10b981 100%); border-radius: 9999px; position: relative; margin-bottom: 8px; }
     .threshold-labels { display: flex; justify-content: space-between; font-size: 11px; color: #64748b; margin-bottom: 16px; }
-    .threshold-labels span { text-align: center; }
     .threshold-rationale { font-size: 13px; color: #475569; font-style: italic; margin-bottom: 8px; }
     .threshold-insight { font-size: 12px; color: #6366f1; font-weight: 500; }
     
-    /* Grade Cards */
     .grade-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 16px; }
     @media (max-width: 768px) { .grade-cards { grid-template-columns: repeat(3, 1fr); } }
     .grade-card { text-align: center; padding: 16px; border-radius: 12px; border: 2px solid; }
@@ -122,7 +122,6 @@
     .grade-card .range { font-size: 13px; font-weight: 600; color: #475569; margin-top: 4px; }
     .grade-card .label { font-size: 11px; color: #64748b; margin-top: 2px; }
     
-    /* Score Simulator */
     .sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     @media (max-width: 768px) { .sim-grid { grid-template-columns: 1fr; } }
     .slider-group { margin-bottom: 20px; }
@@ -157,45 +156,42 @@
     .tips-box ul { margin-left: 20px; font-size: 13px; color: #92400e; }
     .tips-box li { margin-bottom: 4px; }
     
-    /* Footer */
     .footer { background: #1e293b; color: #94a3b8; padding: 24px 0; margin-top: 48px; text-align: center; font-size: 14px; }
     .footer p { margin: 4px 0; }
     
-    /* Chart container */
     .chart-container { position: relative; height: 250px; margin-bottom: 16px; }
-    .chart-container-tall { position: relative; height: 300px; margin-bottom: 16px; }
     .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     @media (max-width: 768px) { .chart-grid { grid-template-columns: 1fr; } }
     
-    /* Insight box */
     .insight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; padding: 16px 20px; border: 1px solid #f59e0b; margin-bottom: 24px; }
     .insight-box h4 { color: #92400e; font-size: 15px; font-weight: 600; margin-bottom: 8px; }
     .insight-box p { color: #78350f; font-size: 14px; line-height: 1.5; }
     .insight-box ul { margin-left: 20px; color: #78350f; font-size: 14px; }
     .insight-box li { margin-bottom: 4px; }
+    
+    .section-title { font-size: 22px; font-weight: 700; color: #1e293b; margin: 32px 0 16px 0; padding-bottom: 8px; border-bottom: 3px solid #6366f1; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <div class="header">
     <div class="container">
       <div class="header-content">
         <h1>🔍 Inspection Scoring Benchmark Analysis</h1>
-        <p>Data-driven thresholds from 1,889 shops • 151,655 benchmark inspections</p>
+        <p>Data-driven thresholds from 1,889 shops • 23,040 segment inspections</p>
       </div>
       <div class="tabs">
         <button class="tab active" data-tab="overview">📊 Overview</button>
         <button class="tab" data-tab="segments">🚗 Vehicle Segments</button>
+        <button class="tab" data-tab="thresholds">📋 Segment Thresholds</button>
         <button class="tab" data-tab="distributions">📈 Distributions</button>
-        <button class="tab" data-tab="recommendations">🎯 Recommendations</button>
-        <button class="tab" data-tab="benchmarks">🏆 Benchmark Shops</button>
-        <button class="tab" data-tab="simulator">⚙️ Score Simulator</button>
+        <button class="tab" data-tab="benchmarks">🏆 Benchmarks</button>
+        <button class="tab" data-tab="simulator">⚙️ Simulator</button>
+        <button class="tab" data-tab="rsquared">📐 R² Analysis</button>
       </div>
     </div>
   </div>
 
-  <!-- Content -->
   <div class="container content">
     
     <!-- Overview Tab -->
@@ -213,18 +209,18 @@
         </div>
         <div class="stat-card" style="border-left-color: #3b82f6;">
           <div class="label">Inspections</div>
-          <div class="value" style="color: #3b82f6;">151,655</div>
-          <div class="subtitle">12-month sample</div>
+          <div class="value" style="color: #3b82f6;">23,040</div>
+          <div class="subtitle">segment analysis</div>
         </div>
         <div class="stat-card" style="border-left-color: #8b5cf6;">
           <div class="label">Metrics</div>
-          <div class="value" style="color: #8b5cf6;">5</div>
+          <div class="value" style="color: #8b5cf6;">4</div>
           <div class="subtitle">quality indicators</div>
         </div>
         <div class="stat-card" style="border-left-color: #f59e0b;">
-          <div class="label">Data Period</div>
-          <div class="value" style="color: #f59e0b;">12 mo</div>
-          <div class="subtitle">trailing window</div>
+          <div class="label">Segments</div>
+          <div class="value" style="color: #f59e0b;">8</div>
+          <div class="subtitle">age + mileage</div>
         </div>
       </div>
 
@@ -235,25 +231,25 @@
             <h4>What We Found</h4>
             <ul>
               <li><span class="check">✓</span> <strong>86 shops</strong> (4.6%) qualify as benchmarks - top 40% in ALL metrics</li>
-              <li><span class="check">✓</span> <strong>Edited image rate</strong> is highly variable (2% to 97%)</li>
-              <li><span class="check">✓</span> <strong>Recommendations with images</strong> is the strongest quality indicator</li>
-              <li><span class="warn">!</span> <strong>ARO doesn't correlate</strong> directly with inspection quality</li>
+              <li><span class="check">✓</span> <strong>2.2x more issues</strong> expected in 10+ year vehicles vs 0-3 year</li>
+              <li><span class="check">✓</span> <strong>2.1x more issues</strong> expected in 150K+ vs 0-50K mileage</li>
+              <li><span class="warn">!</span> <strong>Flat thresholds don't work</strong> - must adjust for vehicle segment</li>
             </ul>
           </div>
           <div>
             <h4>Our Recommendations</h4>
             <ul>
+              <li><span class="arrow">→</span> Use <strong>segment-adjusted thresholds</strong> for Issues Found</li>
               <li><span class="arrow">→</span> Weight <strong>Recs with Image (35%)</strong> highest</li>
-              <li><span class="arrow">→</span> Set <strong>minimum thresholds</strong> at Q2 levels</li>
-              <li><span class="arrow">→</span> Consider <strong>vehicle age/mileage</strong> adjustments</li>
-              <li><span class="arrow">→</span> Make <strong>edited rate optional</strong> or configurable</li>
+              <li><span class="arrow">→</span> Set flat thresholds for Images & Recs w/ Image</li>
+              <li><span class="arrow">→</span> Make <strong>Edited Rate configurable</strong> per shop type</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <h3>🎯 Recommended Scoring Thresholds</h3>
+        <h3>🎯 Base Scoring Thresholds (Before Segment Adjustment)</h3>
         <table>
           <thead>
             <tr>
@@ -269,49 +265,46 @@
             <tr>
               <td>Avg Images per Inspection</td>
               <td class="text-center">25%</td>
-              <td class="text-center text-red">&lt;10</td>
-              <td class="text-center text-orange">17</td>
-              <td class="text-center text-blue font-bold">25</td>
-              <td class="text-center text-green">35+</td>
+              <td class="text-center text-red">&lt;15</td>
+              <td class="text-center text-orange">20</td>
+              <td class="text-center text-blue font-bold">33</td>
+              <td class="text-center text-green">42+</td>
             </tr>
             <tr>
               <td>Edited Image Rate</td>
               <td class="text-center">15%</td>
               <td class="text-center text-red">&lt;2%</td>
               <td class="text-center text-orange">2%</td>
-              <td class="text-center text-blue font-bold">20%</td>
-              <td class="text-center text-green">40%+</td>
+              <td class="text-center text-blue font-bold">12%</td>
+              <td class="text-center text-green">25%+</td>
             </tr>
             <tr>
-              <td>Avg Issues Found</td>
+              <td>Avg Issues Found *</td>
               <td class="text-center">25%</td>
-              <td class="text-center text-red">&lt;8</td>
-              <td class="text-center text-orange">22</td>
-              <td class="text-center text-blue font-bold">35</td>
-              <td class="text-center text-green">45+</td>
+              <td class="text-center text-slate" colspan="4">See Segment Thresholds tab →</td>
             </tr>
             <tr>
               <td>Recs with Image Rate</td>
               <td class="text-center">35%</td>
-              <td class="text-center text-red">&lt;40%</td>
+              <td class="text-center text-red">&lt;50%</td>
               <td class="text-center text-orange">62%</td>
-              <td class="text-center text-blue font-bold">78%</td>
+              <td class="text-center text-blue font-bold">82%</td>
               <td class="text-center text-green">85%+</td>
             </tr>
           </tbody>
         </table>
+        <p style="margin-top: 12px; font-size: 13px; color: #64748b;">* Issues Found thresholds must be adjusted based on vehicle age and mileage. See "Segment Thresholds" tab for complete breakdown.</p>
       </div>
     </div>
 
-    <!-- Vehicle Segments Tab (NEW) -->
+    <!-- Vehicle Segments Tab -->
     <div id="segments" class="tab-content">
       <div class="alert alert-rose">
-        <strong>🚗 Critical Insight:</strong> Vehicle age and mileage dramatically affect expected findings. A new car with 30K miles should NOT have as many issues as a 12-year-old car with 180K miles. Scoring must account for this!
+        <strong>🚗 Critical Insight:</strong> Vehicle age and mileage dramatically affect expected findings. Scoring must be segment-aware!
       </div>
       
       <div class="insight-box">
         <h4>💡 Key Finding: Issues Found Should Scale with Vehicle Age/Mileage</h4>
-        <p>Based on 23,040 Ramsey inspections, we found:</p>
         <ul>
           <li><strong>2.2x more issues</strong> in 10+ year vehicles vs 0-3 year vehicles (11.9 vs 5.4)</li>
           <li><strong>2.1x more issues</strong> in 150K+ mileage vs 0-50K mileage (12.9 vs 6.0)</li>
@@ -399,7 +392,6 @@
 
       <div class="card">
         <h3>🔥 Heat Map: Avg Issues Found by Age × Mileage</h3>
-        <p style="color: #64748b; font-size: 13px; margin-bottom: 16px;">Higher numbers indicate more thorough inspections (expected for older/higher-mileage vehicles)</p>
         <table class="matrix-table">
           <thead>
             <tr>
@@ -442,63 +434,209 @@
           </tbody>
         </table>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>📋 Recommended Segment-Adjusted Thresholds for "Issues Found"</h3>
-        <p style="color: #64748b; font-size: 13px; margin-bottom: 16px;">Instead of one fixed threshold, use these segment-specific expectations:</p>
-        <table>
+    <!-- NEW: Segment Thresholds Tab (32 thresholds) -->
+    <div id="thresholds" class="tab-content">
+      <div class="alert alert-purple">
+        <strong>📋 Complete Threshold Reference:</strong> 4 metrics × 8 segments = 32 threshold sets. Use these for segment-aware scoring.
+      </div>
+
+      <div class="section-title">🚙 Thresholds by Vehicle Age (4 segments)</div>
+      
+      <div class="metric-header">📸 Average Images per Inspection</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
           <thead>
             <tr>
-              <th>Vehicle Segment</th>
-              <th class="text-center">Minimum Issues</th>
-              <th class="text-center">Target Issues</th>
-              <th class="text-center">Excellent Issues</th>
-              <th class="text-center">Observed Avg</th>
+              <th style="width: 25%">Vehicle Age</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>New</strong> (0-3 yrs, 0-50K mi)</td>
-              <td class="text-center text-orange">3</td>
-              <td class="text-center text-blue font-bold">5</td>
-              <td class="text-center text-green">8+</td>
-              <td class="text-center">4.6</td>
-            </tr>
-            <tr>
-              <td><strong>Mid-Life</strong> (4-6 yrs, 50-100K mi)</td>
-              <td class="text-center text-orange">6</td>
-              <td class="text-center text-blue font-bold">10</td>
-              <td class="text-center text-green">15+</td>
-              <td class="text-center">9.3</td>
-            </tr>
-            <tr>
-              <td><strong>Mature</strong> (7-10 yrs, 100-150K mi)</td>
-              <td class="text-center text-orange">8</td>
-              <td class="text-center text-blue font-bold">12</td>
-              <td class="text-center text-green">18+</td>
-              <td class="text-center">11.6</td>
-            </tr>
-            <tr>
-              <td><strong>High-Mileage</strong> (10+ yrs, 150K+ mi)</td>
-              <td class="text-center text-orange">10</td>
-              <td class="text-center text-blue font-bold">15</td>
-              <td class="text-center text-green">20+</td>
-              <td class="text-center">13.2</td>
-            </tr>
+            <tr><td class="row-header">0-3 Years</td><td class="observed">30.1</td><td class="minimum">20</td><td class="target">30</td><td class="excellent">38</td><td>2,648</td></tr>
+            <tr><td class="row-header">4-6 Years</td><td class="observed">33.2</td><td class="minimum">22</td><td class="target">33</td><td class="excellent">42</td><td>4,038</td></tr>
+            <tr><td class="row-header">7-10 Years</td><td class="observed">34.3</td><td class="minimum">22</td><td class="target">34</td><td class="excellent">43</td><td>6,490</td></tr>
+            <tr><td class="row-header">10+ Years</td><td class="observed">34.6</td><td class="minimum">23</td><td class="target">35</td><td class="excellent">43</td><td>9,823</td></tr>
           </tbody>
         </table>
       </div>
 
-      <div class="alert alert-amber">
-        <h4 style="margin-bottom: 8px;">⚠️ Scoring Implication</h4>
-        <p>A technician inspecting a 2023 vehicle with 25K miles who finds 5 issues is doing a <strong>thorough job</strong>. The same technician inspecting a 2012 vehicle with 175K miles who finds 5 issues is likely <strong>rushing or missing problems</strong>. The scoring system must differentiate these scenarios.</p>
+      <div class="metric-header">✏️ Edited Image Rate</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Vehicle Age</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-3 Years</td><td class="observed">2.4%</td><td class="minimum">2%</td><td class="target">10%</td><td class="excellent">25%</td><td>2,648</td></tr>
+            <tr><td class="row-header">4-6 Years</td><td class="observed">3.8%</td><td class="minimum">2%</td><td class="target">11%</td><td class="excellent">25%</td><td>4,038</td></tr>
+            <tr><td class="row-header">7-10 Years</td><td class="observed">4.2%</td><td class="minimum">2%</td><td class="target">13%</td><td class="excellent">25%</td><td>6,490</td></tr>
+            <tr><td class="row-header">10+ Years</td><td class="observed">4.6%</td><td class="minimum">2%</td><td class="target">14%</td><td class="excellent">27%</td><td>9,823</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metric-header">🔧 Average Issues Found (Segment-Critical!)</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Vehicle Age</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-3 Years</td><td class="observed">5.4</td><td class="minimum">3</td><td class="target">6</td><td class="excellent">8</td><td>2,648</td></tr>
+            <tr><td class="row-header">4-6 Years</td><td class="observed">8.9</td><td class="minimum">5</td><td class="target">10</td><td class="excellent">13</td><td>4,038</td></tr>
+            <tr><td class="row-header">7-10 Years</td><td class="observed">10.7</td><td class="minimum">6</td><td class="target">12</td><td class="excellent">16</td><td>6,490</td></tr>
+            <tr><td class="row-header">10+ Years</td><td class="observed">11.9</td><td class="minimum">7</td><td class="target">14</td><td class="excellent">18</td><td>9,823</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metric-header">🖼️ Recommendations with Image Rate</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Vehicle Age</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-3 Years</td><td class="observed">77.8%</td><td class="minimum">62%</td><td class="target">81%</td><td class="excellent">85%</td><td>2,648</td></tr>
+            <tr><td class="row-header">4-6 Years</td><td class="observed">78.9%</td><td class="minimum">62%</td><td class="target">82%</td><td class="excellent">85%</td><td>4,038</td></tr>
+            <tr><td class="row-header">7-10 Years</td><td class="observed">79.9%</td><td class="minimum">62%</td><td class="target">83%</td><td class="excellent">85%</td><td>6,490</td></tr>
+            <tr><td class="row-header">10+ Years</td><td class="observed">80.5%</td><td class="minimum">62%</td><td class="target">83%</td><td class="excellent">85%</td><td>9,823</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-title">🛣️ Thresholds by Mileage Range (4 segments)</div>
+
+      <div class="metric-header">📸 Average Images per Inspection</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Mileage Range</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-50K</td><td class="observed">30.2</td><td class="minimum">20</td><td class="target">30</td><td class="excellent">38</td><td>4,524</td></tr>
+            <tr><td class="row-header">50K-100K</td><td class="observed">33.5</td><td class="minimum">22</td><td class="target">33</td><td class="excellent">42</td><td>6,736</td></tr>
+            <tr><td class="row-header">100K-150K</td><td class="observed">35.0</td><td class="minimum">23</td><td class="target">35</td><td class="excellent">44</td><td>6,460</td></tr>
+            <tr><td class="row-header">150K+</td><td class="observed">35.6</td><td class="minimum">23</td><td class="target">36</td><td class="excellent">45</td><td>5,281</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metric-header">✏️ Edited Image Rate</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Mileage Range</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-50K</td><td class="observed">2.8%</td><td class="minimum">2%</td><td class="target">10%</td><td class="excellent">25%</td><td>4,524</td></tr>
+            <tr><td class="row-header">50K-100K</td><td class="observed">4.0%</td><td class="minimum">2%</td><td class="target">12%</td><td class="excellent">25%</td><td>6,736</td></tr>
+            <tr><td class="row-header">100K-150K</td><td class="observed">4.6%</td><td class="minimum">2%</td><td class="target">14%</td><td class="excellent">28%</td><td>6,460</td></tr>
+            <tr><td class="row-header">150K+</td><td class="observed">4.6%</td><td class="minimum">2%</td><td class="target">14%</td><td class="excellent">28%</td><td>5,281</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metric-header">🔧 Average Issues Found (Segment-Critical!)</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Mileage Range</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-50K</td><td class="observed">6.0</td><td class="minimum">4</td><td class="target">7</td><td class="excellent">9</td><td>4,524</td></tr>
+            <tr><td class="row-header">50K-100K</td><td class="observed">9.8</td><td class="minimum">6</td><td class="target">11</td><td class="excellent">15</td><td>6,736</td></tr>
+            <tr><td class="row-header">100K-150K</td><td class="observed">11.8</td><td class="minimum">7</td><td class="target">14</td><td class="excellent">18</td><td>6,460</td></tr>
+            <tr><td class="row-header">150K+</td><td class="observed">12.9</td><td class="minimum">8</td><td class="target">15</td><td class="excellent">19</td><td>5,281</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metric-header">🖼️ Recommendations with Image Rate</div>
+      <div class="metric-table-wrap">
+        <table class="threshold-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Mileage Range</th>
+              <th style="width: 15%">Observed</th>
+              <th style="width: 15%">Minimum</th>
+              <th style="width: 15%">Target</th>
+              <th style="width: 15%">Excellent</th>
+              <th style="width: 15%">Sample</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-header">0-50K</td><td class="observed">78.8%</td><td class="minimum">62%</td><td class="target">82%</td><td class="excellent">85%</td><td>4,524</td></tr>
+            <tr><td class="row-header">50K-100K</td><td class="observed">79.7%</td><td class="minimum">62%</td><td class="target">83%</td><td class="excellent">85%</td><td>6,736</td></tr>
+            <tr><td class="row-header">100K-150K</td><td class="observed">80.0%</td><td class="minimum">62%</td><td class="target">83%</td><td class="excellent">85%</td><td>6,460</td></tr>
+            <tr><td class="row-header">150K+</td><td class="observed">80.3%</td><td class="minimum">62%</td><td class="target">83%</td><td class="excellent">85%</td><td>5,281</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="alert alert-amber" style="margin-top: 24px;">
+        <h4 style="margin-bottom: 8px;">⚠️ Implementation Notes</h4>
+        <ul style="margin-left: 20px;">
+          <li><strong>Issues Found</strong> has the most variation (3-19 range) - MUST be segment-adjusted</li>
+          <li><strong>Images & Recs w/ Image</strong> relatively stable - can use single threshold with minor adjustment</li>
+          <li><strong>Edited Rate</strong> highly variable by shop type - consider making configurable</li>
+          <li>When both Age and Mileage are known, use the <strong>higher threshold</strong> (more conservative)</li>
+        </ul>
       </div>
     </div>
 
     <!-- Distributions Tab -->
     <div id="distributions" class="tab-content">
       <div class="alert alert-indigo">
-        <strong>📊 How to Read:</strong> Each chart shows the max value for shops in each quintile (20% bucket). Top 20% are best performers, Bottom 20% need most improvement.
+        <strong>📊 How to Read:</strong> Each chart shows the max value for shops in each quintile (20% bucket).
       </div>
       <div class="chart-grid">
         <div class="card">
@@ -518,176 +656,27 @@
           <div class="chart-container"><canvas id="chart-recs"></canvas></div>
         </div>
       </div>
-      <div class="card">
-        <h4>ARO Distribution (for reference - not in scoring)</h4>
-        <div class="chart-container"><canvas id="chart-aro"></canvas></div>
-      </div>
-    </div>
-
-    <!-- Recommendations Tab -->
-    <div id="recommendations" class="tab-content">
-      <div class="alert alert-green">
-        <h3 style="margin-bottom: 8px;">🎯 Scoring Model Recommendation</h3>
-        <p>Based on analysis of 1,889 shops, we recommend a <strong>4-metric weighted scoring model</strong> with thresholds derived from the top 40% of performers.</p>
-      </div>
-      
-      <div class="grid-2">
-        <div class="threshold-card">
-          <div class="threshold-header">
-            <div>
-              <h4>Average Images per Inspection</h4>
-              <div class="weight">Weight: 25%</div>
-            </div>
-            <span class="badge">Target: 25</span>
-          </div>
-          <div class="threshold-bar"></div>
-          <div class="threshold-labels">
-            <span>Poor<br>&lt;10</span>
-            <span>Minimum<br>17</span>
-            <span>Target<br>25</span>
-            <span>Excellent<br>35+</span>
-          </div>
-          <div class="threshold-rationale">Visual documentation is critical for customer trust. Top shops average 25+ images.</div>
-          <div class="threshold-insight">💡 60% of shops take fewer than 17 images - major opportunity for improvement.</div>
-        </div>
-        
-        <div class="threshold-card">
-          <div class="threshold-header">
-            <div>
-              <h4>Edited Image Rate</h4>
-              <div class="weight">Weight: 15%</div>
-            </div>
-            <span class="badge">Target: 20%</span>
-          </div>
-          <div class="threshold-bar"></div>
-          <div class="threshold-labels">
-            <span>Poor<br>&lt;2%</span>
-            <span>Minimum<br>2%</span>
-            <span>Target<br>20%</span>
-            <span>Excellent<br>40%+</span>
-          </div>
-          <div class="threshold-rationale">Edited images (arrows, circles) increase customer understanding by 40%.</div>
-          <div class="threshold-insight">💡 Highly variable metric - some top shops edit 90%+ while others edit &lt;5%.</div>
-        </div>
-        
-        <div class="threshold-card">
-          <div class="threshold-header">
-            <div>
-              <h4>Average Issues Found per Inspection</h4>
-              <div class="weight">Weight: 25%</div>
-            </div>
-            <span class="badge">Target: 35 (adj.)</span>
-          </div>
-          <div class="threshold-bar"></div>
-          <div class="threshold-labels">
-            <span>Poor<br>&lt;8</span>
-            <span>Minimum<br>22</span>
-            <span>Target<br>35</span>
-            <span>Excellent<br>45+</span>
-          </div>
-          <div class="threshold-rationale">More findings = more thorough inspection. Should scale with vehicle age/mileage.</div>
-          <div class="threshold-insight">💡 See "Vehicle Segments" tab for age/mileage adjusted thresholds.</div>
-        </div>
-        
-        <div class="threshold-card">
-          <div class="threshold-header">
-            <div>
-              <h4>Recommendations with Image Rate</h4>
-              <div class="weight">Weight: 35%</div>
-            </div>
-            <span class="badge">Target: 78%</span>
-          </div>
-          <div class="threshold-bar"></div>
-          <div class="threshold-labels">
-            <span>Poor<br>&lt;40%</span>
-            <span>Minimum<br>62%</span>
-            <span>Target<br>78%</span>
-            <span>Excellent<br>85%+</span>
-          </div>
-          <div class="threshold-rationale">Every recommendation should have photo proof. Strongest quality indicator.</div>
-          <div class="threshold-insight">💡 Top 40% of shops support 62%+ of recommendations with images.</div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <h3>📝 Proposed Grading Scale</h3>
-        <div class="grade-cards">
-          <div class="grade-card" style="background: #10b98115; border-color: #10b981;">
-            <div class="grade" style="color: #10b981;">A</div>
-            <div class="range">85-100</div>
-            <div class="label">Excellent</div>
-          </div>
-          <div class="grade-card" style="background: #3b82f615; border-color: #3b82f6;">
-            <div class="grade" style="color: #3b82f6;">B</div>
-            <div class="range">70-84</div>
-            <div class="label">Good</div>
-          </div>
-          <div class="grade-card" style="background: #f59e0b15; border-color: #f59e0b;">
-            <div class="grade" style="color: #f59e0b;">C</div>
-            <div class="range">55-69</div>
-            <div class="label">Average</div>
-          </div>
-          <div class="grade-card" style="background: #f9731615; border-color: #f97316;">
-            <div class="grade" style="color: #f97316;">D</div>
-            <div class="range">40-54</div>
-            <div class="label">Below Avg</div>
-          </div>
-          <div class="grade-card" style="background: #ef444415; border-color: #ef4444;">
-            <div class="grade" style="color: #ef4444;">F</div>
-            <div class="range">0-39</div>
-            <div class="label">Poor</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Benchmarks Tab -->
     <div id="benchmarks" class="tab-content">
       <div class="alert alert-indigo">
-        <strong>🏆 Benchmark Criteria:</strong> Shops must be in the top 40% (Q1 or Q2) for ALL 4 inspection quality metrics. 86 shops (4.6% of total) meet this standard.
+        <strong>🏆 Benchmark Criteria:</strong> Shops in top 40% for ALL 4 metrics. 86 shops qualify.
       </div>
       
       <div class="grid-5">
-        <div class="stat-card">
-          <div class="label">Avg Images</div>
-          <div class="value">25.3</div>
-          <div class="subtitle">median</div>
-        </div>
-        <div class="stat-card" style="border-left-color: #8b5cf6;">
-          <div class="label">Edited Rate</div>
-          <div class="value" style="color: #8b5cf6;">33%</div>
-          <div class="subtitle">median</div>
-        </div>
-        <div class="stat-card">
-          <div class="label">Avg Issues</div>
-          <div class="value">36.6</div>
-          <div class="subtitle">median</div>
-        </div>
-        <div class="stat-card" style="border-left-color: #10b981;">
-          <div class="label">Recs w/ Image</div>
-          <div class="value" style="color: #10b981;">78%</div>
-          <div class="subtitle">median</div>
-        </div>
-        <div class="stat-card" style="border-left-color: #f59e0b;">
-          <div class="label">Avg ARO</div>
-          <div class="value" style="color: #f59e0b;">$620</div>
-          <div class="subtitle">median</div>
-        </div>
+        <div class="stat-card"><div class="label">Avg Images</div><div class="value">25.3</div><div class="subtitle">median</div></div>
+        <div class="stat-card" style="border-left-color: #8b5cf6;"><div class="label">Edited Rate</div><div class="value" style="color: #8b5cf6;">33%</div><div class="subtitle">median</div></div>
+        <div class="stat-card"><div class="label">Avg Issues</div><div class="value">36.6</div><div class="subtitle">median</div></div>
+        <div class="stat-card" style="border-left-color: #10b981;"><div class="label">Recs w/ Image</div><div class="value" style="color: #10b981;">78%</div><div class="subtitle">median</div></div>
+        <div class="stat-card" style="border-left-color: #f59e0b;"><div class="label">Avg ARO</div><div class="value" style="color: #f59e0b;">$620</div><div class="subtitle">median</div></div>
       </div>
       
       <div class="card">
-        <h3>Top 15 Benchmark Shops (by inspection volume)</h3>
+        <h3>Top 15 Benchmark Shops</h3>
         <table>
           <thead>
-            <tr>
-              <th>Shop ID</th>
-              <th class="text-right">Inspections</th>
-              <th class="text-right">Avg Images</th>
-              <th class="text-right">Edited %</th>
-              <th class="text-right">Avg Issues</th>
-              <th class="text-right">Recs w/ Img</th>
-              <th class="text-right">ARO</th>
-            </tr>
+            <tr><th>Shop ID</th><th class="text-right">Inspections</th><th class="text-right">Avg Images</th><th class="text-right">Edited %</th><th class="text-right">Avg Issues</th><th class="text-right">Recs w/ Img</th><th class="text-right">ARO</th></tr>
           </thead>
           <tbody>
             <tr><td class="font-mono text-indigo font-bold">12786</td><td class="text-right font-bold">5,121</td><td class="text-right">19.6</td><td class="text-right">20.0%</td><td class="text-right">27.5</td><td class="text-right">95.4%</td><td class="text-right">$361</td></tr>
@@ -700,11 +689,6 @@
             <tr><td class="font-mono text-indigo font-bold">13656</td><td class="text-right font-bold">3,542</td><td class="text-right">26.1</td><td class="text-right">84.3%</td><td class="text-right">36.3</td><td class="text-right">87.8%</td><td class="text-right">$370</td></tr>
             <tr><td class="font-mono text-indigo font-bold">13938</td><td class="text-right font-bold">3,466</td><td class="text-right">19.7</td><td class="text-right">82.1%</td><td class="text-right">39.9</td><td class="text-right">88.8%</td><td class="text-right">$373</td></tr>
             <tr><td class="font-mono text-indigo font-bold">1585</td><td class="text-right font-bold">3,389</td><td class="text-right">41.3</td><td class="text-right">4.4%</td><td class="text-right">42.0</td><td class="text-right">86.5%</td><td class="text-right">$934</td></tr>
-            <tr><td class="font-mono text-indigo font-bold">8240</td><td class="text-right font-bold">3,183</td><td class="text-right">23.4</td><td class="text-right">92.8%</td><td class="text-right">33.0</td><td class="text-right">85.0%</td><td class="text-right">$309</td></tr>
-            <tr><td class="font-mono text-indigo font-bold">4476</td><td class="text-right font-bold">3,171</td><td class="text-right">23.0</td><td class="text-right">16.5%</td><td class="text-right">39.6</td><td class="text-right">81.1%</td><td class="text-right">$553</td></tr>
-            <tr><td class="font-mono text-indigo font-bold">9096</td><td class="text-right font-bold">3,105</td><td class="text-right">17.9</td><td class="text-right">8.3%</td><td class="text-right">41.7</td><td class="text-right">82.2%</td><td class="text-right">$539</td></tr>
-            <tr><td class="font-mono text-indigo font-bold">12630</td><td class="text-right font-bold">3,031</td><td class="text-right">19.3</td><td class="text-right">24.6%</td><td class="text-right">23.6</td><td class="text-right">96.8%</td><td class="text-right">$142</td></tr>
-            <tr><td class="font-mono text-indigo font-bold">10530</td><td class="text-right font-bold">3,014</td><td class="text-right">32.8</td><td class="text-right">50.8%</td><td class="text-right">49.2</td><td class="text-right">95.7%</td><td class="text-right">$622</td></tr>
           </tbody>
         </table>
       </div>
@@ -713,61 +697,37 @@
     <!-- Simulator Tab -->
     <div id="simulator" class="tab-content">
       <div class="alert alert-purple">
-        <strong>⚙️ Score Simulator:</strong> Enter inspection metrics below to see how the proposed scoring model would grade an inspection.
+        <strong>⚙️ Score Simulator:</strong> Test the scoring model with custom inputs.
       </div>
       
       <div class="sim-grid">
         <div class="card">
-          <h3>Enter Inspection Metrics</h3>
-          
+          <h3>Enter Metrics</h3>
           <div class="slider-group">
             <label>Average Images: <span id="val-images">25</span></label>
             <input type="range" id="slider-images" min="0" max="60" value="25">
-            <div class="slider-hints">
-              <span>0</span>
-              <span class="hint-orange">Min: 17</span>
-              <span class="hint-blue">Target: 25</span>
-              <span class="hint-green">35+</span>
-            </div>
+            <div class="slider-hints"><span>0</span><span class="hint-orange">Min: 20</span><span class="hint-blue">Target: 33</span><span class="hint-green">42+</span></div>
           </div>
-          
           <div class="slider-group">
             <label>Edited Image Rate: <span id="val-edited">15%</span></label>
             <input type="range" id="slider-edited" min="0" max="100" value="15">
-            <div class="slider-hints">
-              <span>0%</span>
-              <span class="hint-orange">Min: 2%</span>
-              <span class="hint-blue">Target: 20%</span>
-              <span class="hint-green">40%+</span>
-            </div>
+            <div class="slider-hints"><span>0%</span><span class="hint-orange">Min: 2%</span><span class="hint-blue">Target: 12%</span><span class="hint-green">25%+</span></div>
           </div>
-          
           <div class="slider-group">
-            <label>Average Issues Found: <span id="val-issues">30</span></label>
-            <input type="range" id="slider-issues" min="0" max="60" value="30">
-            <div class="slider-hints">
-              <span>0</span>
-              <span class="hint-orange">Min: 22</span>
-              <span class="hint-blue">Target: 35</span>
-              <span class="hint-green">45+</span>
-            </div>
+            <label>Average Issues Found: <span id="val-issues">10</span></label>
+            <input type="range" id="slider-issues" min="0" max="30" value="10">
+            <div class="slider-hints"><span>0</span><span class="hint-orange">Min: 5</span><span class="hint-blue">Target: 10</span><span class="hint-green">15+</span></div>
           </div>
-          
           <div class="slider-group">
             <label>Recs with Image: <span id="val-recs">75%</span></label>
             <input type="range" id="slider-recs" min="0" max="100" value="75">
-            <div class="slider-hints">
-              <span>0%</span>
-              <span class="hint-orange">Min: 62%</span>
-              <span class="hint-blue">Target: 78%</span>
-              <span class="hint-green">85%+</span>
-            </div>
+            <div class="slider-hints"><span>0%</span><span class="hint-orange">Min: 62%</span><span class="hint-blue">Target: 82%</span><span class="hint-green">85%+</span></div>
           </div>
         </div>
         
         <div>
           <div class="score-display">
-            <div class="title">Overall Inspection Score</div>
+            <div class="title">Overall Score</div>
             <div class="score-row">
               <div class="score-number" id="total-score">68</div>
               <div>
@@ -775,222 +735,408 @@
                 <div class="score-label" id="total-label">Average</div>
               </div>
             </div>
-            <div class="score-bar">
-              <div class="score-bar-fill" id="total-bar" style="width: 68%;"></div>
-            </div>
+            <div class="score-bar"><div class="score-bar-fill" id="total-bar" style="width: 68%;"></div></div>
           </div>
           
           <div class="card">
             <h4>Component Scores</h4>
             <div class="component-scores">
-              <div class="component-row">
-                <div class="component-label">Avg Images</div>
-                <div class="component-bar"><div class="component-bar-fill" id="bar-images" style="width: 75%;"></div></div>
-                <div class="component-score" id="score-images">75</div>
-                <div class="component-weight">×25%</div>
-              </div>
-              <div class="component-row">
-                <div class="component-label">Edited Rate</div>
-                <div class="component-bar"><div class="component-bar-fill" id="bar-edited" style="width: 50%;"></div></div>
-                <div class="component-score" id="score-edited">50</div>
-                <div class="component-weight">×15%</div>
-              </div>
-              <div class="component-row">
-                <div class="component-label">Avg Issues</div>
-                <div class="component-bar"><div class="component-bar-fill" id="bar-issues" style="width: 65%;"></div></div>
-                <div class="component-score" id="score-issues">65</div>
-                <div class="component-weight">×25%</div>
-              </div>
-              <div class="component-row">
-                <div class="component-label">Recs w/ Image</div>
-                <div class="component-bar"><div class="component-bar-fill" id="bar-recs" style="width: 70%;"></div></div>
-                <div class="component-score" id="score-recs">70</div>
-                <div class="component-weight">×35%</div>
-              </div>
+              <div class="component-row"><div class="component-label">Avg Images</div><div class="component-bar"><div class="component-bar-fill" id="bar-images"></div></div><div class="component-score" id="score-images">75</div><div class="component-weight">×25%</div></div>
+              <div class="component-row"><div class="component-label">Edited Rate</div><div class="component-bar"><div class="component-bar-fill" id="bar-edited"></div></div><div class="component-score" id="score-edited">50</div><div class="component-weight">×15%</div></div>
+              <div class="component-row"><div class="component-label">Avg Issues</div><div class="component-bar"><div class="component-bar-fill" id="bar-issues"></div></div><div class="component-score" id="score-issues">65</div><div class="component-weight">×25%</div></div>
+              <div class="component-row"><div class="component-label">Recs w/ Image</div><div class="component-bar"><div class="component-bar-fill" id="bar-recs"></div></div><div class="component-score" id="score-recs">70</div><div class="component-weight">×35%</div></div>
             </div>
           </div>
           
           <div class="alert alert-amber tips-box">
-            <h4>💡 Quick Improvements</h4>
-            <ul id="tips-list">
-              <li>Attach images to more recommendations (+35% weight)</li>
-            </ul>
+            <h4>💡 Improvement Tips</h4>
+            <ul id="tips-list"><li>Loading...</li></ul>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- R² Analysis Tab (NEW) -->
+    <div id="rsquared" class="tab-content">
+      <div class="alert alert-indigo">
+        <strong>📐 R² Analysis:</strong> Statistical correlation between vehicle age/mileage and each metric. R² values indicate how much each metric should scale by segment.
+      </div>
+
+      <div class="grid-4">
+        <div class="stat-card" style="border-left-color: #ef4444;">
+          <div class="label">Avg Issues R²</div>
+          <div class="value" style="color: #ef4444;">0.94</div>
+          <div class="subtitle">MUST scale by segment</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #f59e0b;">
+          <div class="label">Avg Images R²</div>
+          <div class="value" style="color: #f59e0b;">0.90</div>
+          <div class="subtitle">Should scale</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #f59e0b;">
+          <div class="label">Edited Rate R²</div>
+          <div class="value" style="color: #f59e0b;">0.90</div>
+          <div class="subtitle">Should scale</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #10b981;">
+          <div class="label">Recs w/ Image R²</div>
+          <div class="value" style="color: #10b981;">0.98</div>
+          <div class="subtitle">High R², tiny range</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📊 R² Summary: Should This Metric Scale?</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th class="text-center">Age R²</th>
+              <th class="text-center">Mileage R²</th>
+              <th class="text-center">Practical Range</th>
+              <th class="text-center">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Avg Issues Found</strong></td>
+              <td class="text-center font-bold text-red">0.9438</td>
+              <td class="text-center font-bold text-red">0.9323</td>
+              <td class="text-center">5.4 → 11.9 (2.2×)</td>
+              <td class="text-center"><span style="background:#fecaca;color:#991b1b;padding:4px 8px;border-radius:4px;font-weight:600;">MUST SCALE</span></td>
+            </tr>
+            <tr>
+              <td>Avg Images</td>
+              <td class="text-center text-orange">0.8429</td>
+              <td class="text-center text-orange">0.8987</td>
+              <td class="text-center">30.1 → 34.6 (1.15×)</td>
+              <td class="text-center"><span style="background:#fef3c7;color:#92400e;padding:4px 8px;border-radius:4px;font-weight:600;">Should Scale</span></td>
+            </tr>
+            <tr>
+              <td>Edited Image Rate</td>
+              <td class="text-center text-orange">0.8987</td>
+              <td class="text-center text-orange">0.8478</td>
+              <td class="text-center">2.4% → 4.6% (1.9×)</td>
+              <td class="text-center"><span style="background:#fef3c7;color:#92400e;padding:4px 8px;border-radius:4px;font-weight:600;">Should Scale</span></td>
+            </tr>
+            <tr>
+              <td>Recs With Image Rate</td>
+              <td class="text-center text-green">0.9823</td>
+              <td class="text-center text-green">0.9108</td>
+              <td class="text-center">77.8% → 80.5% (1.03×)</td>
+              <td class="text-center"><span style="background:#dcfce7;color:#166534;padding:4px 8px;border-radius:4px;font-weight:600;">Use FLAT 80%</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;font-size:13px;color:#64748b;">
+          <strong>Note:</strong> High R² doesn't always mean you should scale. "Recs With Image" has excellent R² but only varies by 2.7 percentage points - not worth the complexity.
+        </p>
+      </div>
+
+      <div class="section-title">📈 Linear Regression: Scaling Formulas</div>
+      
+      <div class="grid-2">
+        <div class="card" style="border: 2px solid #ef4444;">
+          <h4 style="color:#ef4444;">🔧 Avg Issues Found (R² = 0.94)</h4>
+          <div style="background:#fef2f2;border-radius:8px;padding:16px;margin:12px 0;font-family:monospace;">
+            <div style="margin-bottom:8px;"><strong>By Age:</strong></div>
+            <div style="font-size:18px;color:#991b1b;">Target = 5.13 + 0.61 × (Years)</div>
+            <div style="margin-top:12px;margin-bottom:8px;"><strong>By Mileage:</strong></div>
+            <div style="font-size:18px;color:#991b1b;">Target = 5.61 + 0.045 × (Miles ÷ 1000)</div>
+          </div>
+          <table style="font-size:12px;">
+            <tr><td>0-3 Years (1.5 avg):</td><td class="text-right font-bold">6.0 issues</td></tr>
+            <tr><td>4-6 Years (5 avg):</td><td class="text-right font-bold">8.2 issues</td></tr>
+            <tr><td>7-10 Years (8.5 avg):</td><td class="text-right font-bold">10.3 issues</td></tr>
+            <tr><td>10+ Years (12 avg):</td><td class="text-right font-bold">12.5 issues</td></tr>
+          </table>
+        </div>
+
+        <div class="card" style="border: 2px solid #f59e0b;">
+          <h4 style="color:#f59e0b;">📸 Avg Images (R² = 0.90)</h4>
+          <div style="background:#fffbeb;border-radius:8px;padding:16px;margin:12px 0;font-family:monospace;">
+            <div style="margin-bottom:8px;"><strong>By Age:</strong></div>
+            <div style="font-size:18px;color:#92400e;">Target = 30.27 + 0.42 × (Years)</div>
+            <div style="margin-top:12px;margin-bottom:8px;"><strong>By Mileage:</strong></div>
+            <div style="font-size:18px;color:#92400e;">Target = 30.05 + 0.035 × (Miles ÷ 1000)</div>
+          </div>
+          <table style="font-size:12px;">
+            <tr><td>0-50K miles:</td><td class="text-right font-bold">30.9 images</td></tr>
+            <tr><td>50-100K miles:</td><td class="text-right font-bold">32.7 images</td></tr>
+            <tr><td>100-150K miles:</td><td class="text-right font-bold">34.4 images</td></tr>
+            <tr><td>150K+ miles:</td><td class="text-right font-bold">36.2 images</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border: 2px solid #f59e0b;">
+          <h4 style="color:#f59e0b;">✏️ Edited Image Rate (R² = 0.90)</h4>
+          <div style="background:#fffbeb;border-radius:8px;padding:16px;margin:12px 0;font-family:monospace;">
+            <div style="margin-bottom:8px;"><strong>By Age:</strong></div>
+            <div style="font-size:18px;color:#92400e;">Target = 2.42% + 0.20% × (Years)</div>
+            <div style="margin-top:12px;margin-bottom:8px;"><strong>By Mileage:</strong></div>
+            <div style="font-size:18px;color:#92400e;">Target = 2.83% + 0.012% × (Miles ÷ 1000)</div>
+          </div>
+          <p style="font-size:12px;color:#64748b;margin-top:8px;">
+            Note: Edited rate is highly variable by shop type. Consider making this configurable rather than strictly scaling.
+          </p>
+        </div>
+
+        <div class="card" style="border: 2px solid #10b981;">
+          <h4 style="color:#10b981;">🖼️ Recs With Image (R² = 0.98 but FLAT recommended)</h4>
+          <div style="background:#ecfdf5;border-radius:8px;padding:16px;margin:12px 0;">
+            <div style="font-size:18px;color:#166534;font-weight:700;text-align:center;">
+              Use Flat Threshold: 80%
+            </div>
+            <div style="text-align:center;margin-top:8px;font-size:13px;color:#065f46;">
+              for all vehicle segments
+            </div>
+          </div>
+          <p style="font-size:12px;color:#64748b;margin-top:8px;">
+            Although R² is very high (0.98), the actual range is only 77.8% → 80.5%. Scaling adds complexity without meaningful differentiation.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📉 Visualizing the Linear Relationships</h3>
+        <div class="chart-grid">
+          <div>
+            <h4 style="text-align:center;margin-bottom:12px;">Avg Issues by Vehicle Age</h4>
+            <div class="chart-container"><canvas id="chart-r2-age-issues"></canvas></div>
+          </div>
+          <div>
+            <h4 style="text-align:center;margin-bottom:12px;">Avg Issues by Mileage</h4>
+            <div class="chart-container"><canvas id="chart-r2-mileage-issues"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-amber">
+        <h4 style="margin-bottom:8px;">⚠️ Implementation Recommendation</h4>
+        <ul style="margin-left:20px;">
+          <li><strong>Avg Issues:</strong> MUST use segment-adjusted thresholds (R² > 0.93, 2.2× range)</li>
+          <li><strong>Avg Images:</strong> Consider scaling OR use conservative flat threshold of 30</li>
+          <li><strong>Edited Rate:</strong> Make configurable per shop - too variable to enforce</li>
+          <li><strong>Recs w/ Image:</strong> Use flat 80% threshold for simplicity</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🧮 Example: Calculating Expected Issues</h3>
+        <p style="margin-bottom:16px;color:#64748b;">For a <strong>8-year-old vehicle with 120,000 miles</strong>:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th class="text-center">Calculation</th>
+              <th class="text-center">Expected Issues</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>By Age Formula</td>
+              <td class="text-center font-mono">5.13 + 0.61 × 8</td>
+              <td class="text-center font-bold">10.0</td>
+            </tr>
+            <tr>
+              <td>By Mileage Formula</td>
+              <td class="text-center font-mono">5.61 + 0.045 × 120</td>
+              <td class="text-center font-bold">11.0</td>
+            </tr>
+            <tr style="background:#f0fdf4;">
+              <td><strong>Recommended: Use Higher</strong></td>
+              <td class="text-center">max(10.0, 11.0)</td>
+              <td class="text-center font-bold text-green" style="font-size:18px;">11.0</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px;font-size:13px;color:#64748b;">
+          When both age and mileage are known, use the <strong>higher</strong> expected value to ensure thorough inspections aren't penalized.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
     <p>Inspection Scoring Benchmark Analysis • AutoVitals DVI Data</p>
-    <p style="color: #64748b;">Based on 1,889 shops • 23,040 segment inspections • December 2024</p>
+    <p style="color: #64748b;">4 metrics × 8 segments = 32 threshold sets • R² analysis for scaling • December 2024</p>
   </div>
 
   <script>
-    // Tab switching
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
-        
-        // Initialize charts when tabs are shown
-        if (tab.dataset.tab === 'distributions' && !window.distChartsInit) {
-          initDistributionCharts();
-          window.distChartsInit = true;
-        }
-        if (tab.dataset.tab === 'segments' && !window.segmentChartsInit) {
-          initSegmentCharts();
-          window.segmentChartsInit = true;
-        }
+        if (tab.dataset.tab === 'distributions' && !window.distChartsInit) { initDistCharts(); window.distChartsInit = true; }
+        if (tab.dataset.tab === 'segments' && !window.segChartsInit) { initSegCharts(); window.segChartsInit = true; }
+        if (tab.dataset.tab === 'rsquared' && !window.r2ChartsInit) { initR2Charts(); window.r2ChartsInit = true; }
       });
     });
 
-    // Distribution charts
-    function initDistributionCharts() {
+    function initDistCharts() {
       const colors = ['#10b981', '#3b82f6', '#f59e0b', '#f97316', '#ef4444'];
-      const labels = ['Top 20%', 'Q2 (20-40%)', 'Q3 (40-60%)', 'Q4 (60-80%)', 'Bottom 20%'];
+      const labels = ['Top 20%', 'Q2', 'Q3', 'Q4', 'Bottom 20%'];
+      const cfg = (data) => ({ type: 'bar', data: { labels, datasets: [{ data, backgroundColor: colors, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: '#e2e8f0' } }, y: { grid: { display: false } } } } });
+      new Chart(document.getElementById('chart-images'), cfg([88.5, 23.3, 16.9, 11.3, 5.8]));
+      new Chart(document.getElementById('chart-edited'), cfg([97.8, 19.2, 1.9, 0.3, 0.01]));
+      new Chart(document.getElementById('chart-issues'), cfg([108.6, 31.8, 21.7, 8.4, 5.0]));
+      new Chart(document.getElementById('chart-recs'), cfg([100, 73.2, 61.5, 47.9, 32.0]));
+    }
+
+    function initSegCharts() {
+      const ageLabels = ['0-3 Yrs', '4-6 Yrs', '7-10 Yrs', '10+ Yrs'];
+      const mileLabels = ['0-50K', '50-100K', '100-150K', '150K+'];
+      const colors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444'];
+      const cfg = (labels, data, max) => ({ type: 'bar', data: { labels, datasets: [{ data, backgroundColor: colors, borderRadius: 6 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, max, grid: { color: '#e2e8f0' } }, x: { grid: { display: false } } } } });
+      new Chart(document.getElementById('chart-age-issues'), cfg(ageLabels, [5.4, 8.9, 10.7, 11.9], 15));
+      new Chart(document.getElementById('chart-age-images'), cfg(ageLabels, [30.1, 33.2, 34.3, 34.6], 40));
+      new Chart(document.getElementById('chart-mileage-issues'), cfg(mileLabels, [6.0, 9.8, 11.8, 12.9], 15));
+      new Chart(document.getElementById('chart-mileage-images'), cfg(mileLabels, [30.2, 33.5, 35.0, 35.6], 40));
+    }
+
+    function initR2Charts() {
+      // Avg Issues by Age - scatter with trend line
+      const ageData = [
+        { x: 1.5, y: 5.4 },  // 0-3 years
+        { x: 5, y: 8.9 },    // 4-6 years
+        { x: 8.5, y: 10.7 }, // 7-10 years
+        { x: 12, y: 11.9 }   // 10+ years
+      ];
       
-      const chartConfig = (data) => ({
-        type: 'bar',
+      // Generate trend line points
+      const ageTrendLine = [];
+      for (let x = 0; x <= 14; x += 2) {
+        ageTrendLine.push({ x: x, y: 5.13 + 0.61 * x });
+      }
+      
+      new Chart(document.getElementById('chart-r2-age-issues'), {
+        type: 'scatter',
         data: {
-          labels: labels,
-          datasets: [{
-            data: data,
-            backgroundColor: colors,
-            borderRadius: 4
-          }]
+          datasets: [
+            {
+              label: 'Observed Data',
+              data: ageData,
+              backgroundColor: '#ef4444',
+              pointRadius: 10,
+              pointHoverRadius: 12
+            },
+            {
+              label: 'Trend Line (R²=0.94)',
+              data: ageTrendLine,
+              type: 'line',
+              borderColor: '#6366f1',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
         },
         options: {
-          indexAxis: 'y',
           responsive: true,
           maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
+          plugins: {
+            legend: { position: 'bottom' },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ctx.dataset.label === 'Observed Data' 
+                  ? `Age: ${ctx.raw.x} yrs, Issues: ${ctx.raw.y}`
+                  : `Predicted: ${ctx.raw.y.toFixed(1)}`
+              }
+            }
+          },
           scales: {
-            x: { grid: { color: '#e2e8f0' } },
-            y: { grid: { display: false } }
+            x: { 
+              title: { display: true, text: 'Vehicle Age (Years)' },
+              min: 0, max: 14,
+              grid: { color: '#e2e8f0' }
+            },
+            y: { 
+              title: { display: true, text: 'Avg Issues Found' },
+              min: 0, max: 16,
+              grid: { color: '#e2e8f0' }
+            }
           }
         }
       });
 
-      new Chart(document.getElementById('chart-images'), chartConfig([88.5, 23.3, 16.9, 11.3, 5.8]));
-      new Chart(document.getElementById('chart-edited'), chartConfig([97.8, 19.2, 1.9, 0.3, 0.01]));
-      new Chart(document.getElementById('chart-issues'), chartConfig([108.6, 31.8, 21.7, 8.4, 5.0]));
-      new Chart(document.getElementById('chart-recs'), chartConfig([100, 73.2, 61.5, 47.9, 32.0]));
-      new Chart(document.getElementById('chart-aro'), chartConfig([11593, 988, 699, 528, 390]));
-    }
-
-    // Segment charts
-    function initSegmentCharts() {
-      const ageLabels = ['0-3 Years', '4-6 Years', '7-10 Years', '10+ Years'];
-      const mileageLabels = ['0-50K', '50K-100K', '100K-150K', '150K+'];
-      const ageColors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444'];
-      const mileageColors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444'];
-
-      // Age - Issues
-      new Chart(document.getElementById('chart-age-issues'), {
-        type: 'bar',
+      // Avg Issues by Mileage
+      const mileageData = [
+        { x: 25, y: 6.0 },   // 0-50K
+        { x: 75, y: 9.8 },   // 50-100K
+        { x: 125, y: 11.8 }, // 100-150K
+        { x: 175, y: 12.9 }  // 150K+
+      ];
+      
+      const mileageTrendLine = [];
+      for (let x = 0; x <= 200; x += 25) {
+        mileageTrendLine.push({ x: x, y: 5.61 + 0.045 * x });
+      }
+      
+      new Chart(document.getElementById('chart-r2-mileage-issues'), {
+        type: 'scatter',
         data: {
-          labels: ageLabels,
-          datasets: [{
-            label: 'Avg Issues Found',
-            data: [5.4, 8.9, 10.7, 11.9],
-            backgroundColor: ageColors,
-            borderRadius: 6
-          }]
+          datasets: [
+            {
+              label: 'Observed Data',
+              data: mileageData,
+              backgroundColor: '#ef4444',
+              pointRadius: 10,
+              pointHoverRadius: 12
+            },
+            {
+              label: 'Trend Line (R²=0.93)',
+              data: mileageTrendLine,
+              type: 'line',
+              borderColor: '#6366f1',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
+          plugins: {
+            legend: { position: 'bottom' },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ctx.dataset.label === 'Observed Data' 
+                  ? `Mileage: ${ctx.raw.x}K, Issues: ${ctx.raw.y}`
+                  : `Predicted: ${ctx.raw.y.toFixed(1)}`
+              }
+            }
+          },
           scales: {
-            y: { beginAtZero: true, max: 15, grid: { color: '#e2e8f0' } },
-            x: { grid: { display: false } }
-          }
-        }
-      });
-
-      // Age - Images
-      new Chart(document.getElementById('chart-age-images'), {
-        type: 'bar',
-        data: {
-          labels: ageLabels,
-          datasets: [{
-            label: 'Avg Images',
-            data: [30.1, 33.2, 34.3, 34.6],
-            backgroundColor: ageColors,
-            borderRadius: 6
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: {
-            y: { beginAtZero: true, max: 40, grid: { color: '#e2e8f0' } },
-            x: { grid: { display: false } }
-          }
-        }
-      });
-
-      // Mileage - Issues
-      new Chart(document.getElementById('chart-mileage-issues'), {
-        type: 'bar',
-        data: {
-          labels: mileageLabels,
-          datasets: [{
-            label: 'Avg Issues Found',
-            data: [6.0, 9.8, 11.8, 12.9],
-            backgroundColor: mileageColors,
-            borderRadius: 6
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: {
-            y: { beginAtZero: true, max: 15, grid: { color: '#e2e8f0' } },
-            x: { grid: { display: false } }
-          }
-        }
-      });
-
-      // Mileage - Images
-      new Chart(document.getElementById('chart-mileage-images'), {
-        type: 'bar',
-        data: {
-          labels: mileageLabels,
-          datasets: [{
-            label: 'Avg Images',
-            data: [30.2, 33.5, 35.0, 35.6],
-            backgroundColor: mileageColors,
-            borderRadius: 6
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: {
-            y: { beginAtZero: true, max: 40, grid: { color: '#e2e8f0' } },
-            x: { grid: { display: false } }
+            x: { 
+              title: { display: true, text: 'Mileage (thousands)' },
+              min: 0, max: 200,
+              grid: { color: '#e2e8f0' }
+            },
+            y: { 
+              title: { display: true, text: 'Avg Issues Found' },
+              min: 0, max: 16,
+              grid: { color: '#e2e8f0' }
+            }
           }
         }
       });
     }
 
-    // Score calculator
     const thresholds = {
-      images: { poor: 10, min: 17, target: 25, excellent: 35, weight: 25 },
-      edited: { poor: 0, min: 2, target: 20, excellent: 40, weight: 15 },
-      issues: { poor: 8, min: 22, target: 35, excellent: 45, weight: 25 },
-      recs: { poor: 40, min: 62, target: 78, excellent: 85, weight: 35 }
+      images: { poor: 15, min: 20, target: 33, excellent: 42, weight: 25 },
+      edited: { poor: 0, min: 2, target: 12, excellent: 25, weight: 15 },
+      issues: { poor: 3, min: 5, target: 10, excellent: 15, weight: 25 },
+      recs: { poor: 50, min: 62, target: 82, excellent: 85, weight: 35 }
     };
 
-    function calcComponentScore(value, t) {
+    function calcScore(value, t) {
       if (value >= t.excellent) return 100;
       if (value >= t.target) return 75 + 25 * (value - t.target) / (t.excellent - t.target);
       if (value >= t.min) return 50 + 25 * (value - t.min) / (t.target - t.min);
@@ -1002,37 +1148,29 @@
       if (score >= 85) return { grade: 'A', color: '#10b981', label: 'Excellent' };
       if (score >= 70) return { grade: 'B', color: '#3b82f6', label: 'Good' };
       if (score >= 55) return { grade: 'C', color: '#f59e0b', label: 'Average' };
-      if (score >= 40) return { grade: 'D', color: '#f97316', label: 'Below Average' };
+      if (score >= 40) return { grade: 'D', color: '#f97316', label: 'Below Avg' };
       return { grade: 'F', color: '#ef4444', label: 'Poor' };
     }
 
     function updateScores() {
-      const values = {
-        images: parseInt(document.getElementById('slider-images').value),
-        edited: parseInt(document.getElementById('slider-edited').value),
-        issues: parseInt(document.getElementById('slider-issues').value),
-        recs: parseInt(document.getElementById('slider-recs').value)
+      const vals = {
+        images: +document.getElementById('slider-images').value,
+        edited: +document.getElementById('slider-edited').value,
+        issues: +document.getElementById('slider-issues').value,
+        recs: +document.getElementById('slider-recs').value
       };
-
-      document.getElementById('val-images').textContent = values.images;
-      document.getElementById('val-edited').textContent = values.edited + '%';
-      document.getElementById('val-issues').textContent = values.issues;
-      document.getElementById('val-recs').textContent = values.recs + '%';
+      document.getElementById('val-images').textContent = vals.images;
+      document.getElementById('val-edited').textContent = vals.edited + '%';
+      document.getElementById('val-issues').textContent = vals.issues;
+      document.getElementById('val-recs').textContent = vals.recs + '%';
 
       const scores = {
-        images: Math.round(calcComponentScore(values.images, thresholds.images)),
-        edited: Math.round(calcComponentScore(values.edited, thresholds.edited)),
-        issues: Math.round(calcComponentScore(values.issues, thresholds.issues)),
-        recs: Math.round(calcComponentScore(values.recs, thresholds.recs))
+        images: Math.round(calcScore(vals.images, thresholds.images)),
+        edited: Math.round(calcScore(vals.edited, thresholds.edited)),
+        issues: Math.round(calcScore(vals.issues, thresholds.issues)),
+        recs: Math.round(calcScore(vals.recs, thresholds.recs))
       };
-
-      const total = Math.round(
-        scores.images * 0.25 + 
-        scores.edited * 0.15 + 
-        scores.issues * 0.25 + 
-        scores.recs * 0.35
-      );
-
+      const total = Math.round(scores.images * 0.25 + scores.edited * 0.15 + scores.issues * 0.25 + scores.recs * 0.35);
       const grade = getGrade(total);
 
       document.getElementById('total-score').textContent = total;
@@ -1043,28 +1181,26 @@
       document.getElementById('total-bar').style.width = total + '%';
       document.getElementById('total-bar').style.backgroundColor = grade.color;
 
-      ['images', 'edited', 'issues', 'recs'].forEach(key => {
-        const g = getGrade(scores[key]);
-        document.getElementById('score-' + key).textContent = scores[key];
-        document.getElementById('score-' + key).style.color = g.color;
-        document.getElementById('bar-' + key).style.width = scores[key] + '%';
-        document.getElementById('bar-' + key).style.backgroundColor = g.color;
+      ['images', 'edited', 'issues', 'recs'].forEach(k => {
+        const g = getGrade(scores[k]);
+        document.getElementById('score-' + k).textContent = scores[k];
+        document.getElementById('score-' + k).style.color = g.color;
+        document.getElementById('bar-' + k).style.width = scores[k] + '%';
+        document.getElementById('bar-' + k).style.backgroundColor = g.color;
       });
 
       const tips = [];
       if (scores.recs < 75) tips.push('Attach images to more recommendations (+35% weight)');
-      if (scores.issues < 50) tips.push('Complete more inspection topics thoroughly');
-      if (scores.images < 50) tips.push('Take more photos during inspection');
-      if (scores.edited < 25) tips.push('Add arrows/circles to highlight issues');
-      if (total >= 85) tips.push('✓ Excellent! This meets top-tier standards.');
-      
+      if (scores.issues < 50) tips.push('Complete more inspection topics');
+      if (scores.images < 50) tips.push('Take more photos');
+      if (scores.edited < 25) tips.push('Add arrows/circles to images');
+      if (total >= 85) tips.push('✓ Excellent! Top-tier performance.');
       document.getElementById('tips-list').innerHTML = tips.map(t => '<li>' + t + '</li>').join('');
     }
 
     ['images', 'edited', 'issues', 'recs'].forEach(id => {
       document.getElementById('slider-' + id).addEventListener('input', updateScores);
     });
-
     updateScores();
   </script>
 </body>
